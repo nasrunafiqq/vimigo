@@ -54,8 +54,8 @@ services:
     image: node:current-alpine
     volumes:
       - ./src:/var/www/html
-    entrypoint: ["npm"]
     working_dir: /var/www/html
+    stdin_open: true
   artisan:
     build:
       context: .

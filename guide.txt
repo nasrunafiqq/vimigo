@@ -46,6 +46,6 @@ command: ["php", "/var/www/html/artisan", "cache:clear"]
 To run vite watcher (npm run dev)
 docker compose run --rm -p 5173:5173 npm run dev
 
-To run command inside rpm
+To run command inside npm
 Remove entry point in docker-compose.yml
 entrypoint: ["npm"]

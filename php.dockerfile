@@ -1,4 +1,5 @@
 FROM php:8-fpm-alpine
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 ENV PHPGROUP=laravel
 ENV PHPUSER=laravel
@@ -11,5 +12,6 @@ RUN sed -i "s/group = www-data/group = ${PHPGROUP}/g" /usr/local/etc/php-fpm.d/w
 RUN mkdir -p /var/www/html/public
 
 RUN docker-php-ext-install pdo pdo_mysql
+RUN install-php-extensions sockets
 
 CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
