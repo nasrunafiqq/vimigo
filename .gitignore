@@ -1,5 +1,5 @@
 # Ignore vendor directory
-/src/vendor/
+/src/public/vendor
 /mysql/
 # Ignore node_modules directory
 /node_modules/
