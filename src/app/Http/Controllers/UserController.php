@@ -12,19 +12,13 @@ class UserController extends Controller
         return User::all();
     }
 
-    public function user($user_id)
+    public function UserPlaylist($user_id)
     {
-        return User::find($user_id);
+        return User::find($user_id)->only('fav_genre', 'interest', 'playlist_history');
     }
 
-    public function UpdateUser($user_id,Request $request)
+    public function UserBilling($user_id)
     {
-        dd($request);
-        $user = User::find($user_id);
-
-        $user->update([
-
-        ]);
-
+        return User::find($user_id)->only('name','email', 'physical_address', 'phone_number');
     }
 }

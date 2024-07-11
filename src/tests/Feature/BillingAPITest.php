@@ -27,7 +27,7 @@ class BillingAPITest extends TestCase
 
         Log::info($user);
   
-        $response = $this->get('/api/user/' . $user->id);
+        $response = $this->get('/api/user/billing/' . $user->id);
         // Assert
         $response->assertStatus(200)
                  ->assertJsonStructure(['name','email', 'physical_address', 'phone_number']);

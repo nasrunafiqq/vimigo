@@ -28,7 +28,7 @@ class PlaylistRecommendationAPITest extends TestCase
 
         Log::info($user);
   
-        $response = $this->get('/api/user/' . $user->id);
+        $response = $this->get('/api/user/playlist/' . $user->id);
         // Assert
         $response->assertStatus(200)
                  ->assertJsonStructure(['fav_genre', 'interest', 'playlist_history']);
