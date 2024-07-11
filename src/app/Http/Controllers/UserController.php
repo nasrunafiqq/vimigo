@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return User::all();
     }
+
+    public function user($user_id)
+    {
+        return User::find($user_id);
+    }
 }
