@@ -66,6 +66,8 @@ run db seeder
 - Register an account at [here](https://www.cloudamqp.com/). choose the free tier
 - create new instance
 - add rabbitMQ config in env
+- go to instance settings and fill in the config in env based on the instance settings 
+- RABBITMQ_VHOST and RABBITMQ_QUEUE can be null
 ```
 RABBITMQ_HOST=
 
